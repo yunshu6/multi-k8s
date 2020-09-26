@@ -13,6 +13,6 @@ docker push flyeagle100/multi-docker-worker:$GIT_SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=flyeagle100/multi-docker-server:$GIT_SHA
-kubectl set image deployments/client-deployment server=flyeagle100/multi-docker-client:$GIT_SHA
-kubectl set image deployments/worker-deployment server=flyeagle100/multi-docker-worker:$GIT_SHA
+kubectl set image deployments/client-deployment client=flyeagle100/multi-docker-client:$GIT_SHA
+kubectl set image deployments/worker-deployment worker=flyeagle100/multi-docker-worker:$GIT_SHA
 
